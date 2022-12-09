@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RedesSociales">
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/rowdies"
+        android:text="@string/btnRRSS"
+        android:textAlignment="center"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        android:typeface="normal"
+        app:layout_constraintBottom_toTopOf="@+id/scrollView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/iButtonHome"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageButton
+                android:id="@+id/btn_web_mpa"
+                android:layout_width="wrap_content"
+                android:layout_height="100dp"
+                android:backgroundTint="#00FFFFFF"
+                android:contentDescription="@string/contentDesc"
+                android:paddingHorizontal="1dp"
+                android:paddingVertical="1dp"
+                android:scaleType="centerInside"
+                app:srcCompat="@drawable/rrss_web_mpa" />
+
+            <ImageButton
+                android:id="@+id/btn_FB_mpa"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:backgroundTint="#00FFFFFF"
+                android:contentDescription="@string/contentDesc"
+                android:paddingHorizontal="1dp"
+                android:paddingVertical="1dp"
+                android:scaleType="centerInside"
+                app:srcCompat="@drawable/rrss_fb_mpa" />
+
+            <ImageButton
+                android:id="@+id/btn_FB_ccs"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:backgroundTint="#00FFFFFF"
+                android:contentDescription="@string/contentDesc"
+                android:paddingHorizontal="1dp"
+                android:paddingVertical="1dp"
+                android:scaleType="centerInside"
+                app:srcCompat="@drawable/rrss_fb_ccs" />
+
+            <ImageButton
+                android:id="@+id/btn_FB_pastor"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:backgroundTint="#00FFFFFF"
+                android:contentDescription="@string/contentDesc"
+                android:paddingHorizontal="1dp"
+                android:paddingVertical="1dp"
+                android:scaleType="centerInside"
+                app:srcCompat="@drawable/rrss_fb_pastor" />
+
+            <ImageButton
+                android:id="@+id/btn_YT_mpa"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:backgroundTint="#00FFFFFF"
+                android:contentDescription="@string/contentDesc"
+                android:paddingHorizontal="1dp"
+                android:paddingVertical="1dp"
+                android:scaleType="centerInside"
+                app:srcCompat="@drawable/rrss_yt_mpa" />
+
+            <ImageButton
+                android:id="@+id/btn_YT_ccs"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:backgroundTint="#00FFFFFF"
+                android:contentDescription="@string/contentDesc"
+                android:paddingHorizontal="1dp"
+                android:paddingVertical="1dp"
+                android:scaleType="centerInside"
+                app:srcCompat="@drawable/rrss_yt_ccs" />
+
+            <ImageButton
+                android:id="@+id/btn_YT_pastor"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:backgroundTint="#00FFFFFF"
+                android:contentDescription="@string/contentDesc"
+                android:paddingHorizontal="1dp"
+                android:paddingVertical="1dp"
+                android:scaleType="centerInside"
+                app:srcCompat="@drawable/rrss_yt_pastor" />
+
+            <ImageButton
+                android:id="@+id/btn_insta_mpa"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:backgroundTint="#00FFFFFF"
+                android:contentDescription="@string/contentDesc"
+                android:paddingHorizontal="1dp"
+                android:paddingVertical="1dp"
+                android:scaleType="centerInside"
+                app:srcCompat="@drawable/rrss_insta_mpa" />
+
+            <ImageButton
+                android:id="@+id/btn_insta_ccs"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:backgroundTint="#00FFFFFF"
+                android:contentDescription="@string/contentDesc"
+                android:paddingHorizontal="1dp"
+                android:paddingVertical="1dp"
+                android:scaleType="centerInside"
+                app:srcCompat="@drawable/rrss_insta_ccs" />
+        </LinearLayout>
+    </ScrollView>
+
+    <ImageButton
+        android:id="@+id/iButtonHome"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:contentDescription="@string/contentDesc"
+        android:onClick="volver_principal"
+        android:scaleType="centerInside"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scrollView2"
+        app:srcCompat="@drawable/btn_home" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

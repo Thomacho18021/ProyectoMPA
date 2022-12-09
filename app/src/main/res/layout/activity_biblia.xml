@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    tools:context=".Biblia">
+
+    <Spinner
+        android:id="@+id/SpinnerLibros"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:contentDescription="@string/Spinner_Libro"
+        android:dropDownWidth="match_parent"
+        android:gravity="center|center_horizontal|center_vertical"
+        android:minHeight="48dp"
+        android:spinnerMode="dialog"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toStartOf="@+id/SpinnerCap"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Spinner
+        android:id="@+id/SpinnerCap"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:contentDescription="@string/Spinner_Capitulos"
+        android:dropDownWidth="wrap_content"
+        android:gravity="center|center_horizontal|center_vertical"
+        android:minWidth="80dp"
+        android:minHeight="48dp"
+        android:spinnerMode="dialog"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/SpinnerLibros"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:id="@+id/ScrollBiblia"
+        android:layout_width="381dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/btn_home"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/SpinnerCap">
+
+        <TextView
+            android:id="@+id/TextoBiblia"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:alpha="@dimen/material_emphasis_high_type"
+            android:justificationMode="inter_word"
+            android:text="Hello World!"
+            android:textAlignment="textStart"
+            android:textSize="24sp" />
+    </ScrollView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btn_home"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="16dp"
+        android:clickable="true"
+        android:contentDescription="@string/btnRRSS"
+        android:onClick="open_home"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ScrollBiblia"
+        app:srcCompat="@drawable/btn_home" />
+
+    <Button
+        android:id="@+id/btnNext"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="16dp"
+        android:background="#00FFFFFF"
+        android:foreground="@drawable/ic_right_button"
+        android:foregroundTint="@color/black"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:onClick="next_chapter"
+        android:textAlignment="center"
+        android:textSize="50dp"
+        android:textStyle="bold"
+        app:iconPadding="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btn_home"
+        app:layout_constraintTop_toBottomOf="@+id/ScrollBiblia" />
+
+    <Button
+        android:id="@+id/btnPrevious"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="16dp"
+        android:background="#00FFFFFF"
+        android:foreground="@drawable/ic_left_button"
+        android:foregroundTint="@color/black"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:onClick="prev_chapter"
+        android:textAlignment="center"
+        android:textSize="50sp"
+        app:iconPadding="1dp"
+        app:layout_constraintEnd_toStartOf="@+id/btn_home"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ScrollBiblia" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
